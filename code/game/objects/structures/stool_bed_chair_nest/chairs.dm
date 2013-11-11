@@ -2,6 +2,7 @@
 	name = "chair"
 	desc = "You sit in this. Either by will or force."
 	icon_state = "chair"
+	anchored = 0
 
 /obj/structure/stool/bed/chair/evac
 	name = "comfy chair"

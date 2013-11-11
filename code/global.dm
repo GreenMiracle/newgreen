@@ -78,7 +78,7 @@ var/diary = null
 var/diaryofmeanpeople = null
 var/href_logfile = null
 var/station_name = "NSS Exodus"
-var/game_version = "Baystation12"
+var/game_version = "Strange Green"
 var/changelog_hash = ""
 
 var/datum/air_tunnel/air_tunnel1/SS13_airtunnel = null
