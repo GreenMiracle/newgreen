@@ -1366,4 +1366,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\fernflower_1.2.dmm"
+#include "maps\fernflower_1.2_1.dmm"
 // END_INCLUDE
