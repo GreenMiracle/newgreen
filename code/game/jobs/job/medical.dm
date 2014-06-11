@@ -52,9 +52,9 @@
 	spawn_positions = 3
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
-	minimal_access = list(access_medical, access_morgue, access_surgery, access_virology)
-	alt_titles = list("Surgeon","Emergency Physician","Nurse","Virologist","Court Medical Expert")
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_genetics, access_maint_tunnels)
+	minimal_access = list(access_medical, access_morgue, access_surgery, access_maint_tunnels)
+	alt_titles = list("Surgeon","Emergency Physician","Nurse","Court Medical Expert")
 
 	equip(var/mob/living/carbon/human/H)
 		if(!H)	return 0
@@ -72,10 +72,10 @@
 					H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/blue(H), slot_w_uniform)
 					H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(H), slot_wear_suit)
 					H.equip_to_slot_or_del(new /obj/item/clothing/head/surgery/blue(H), slot_head)
-				if("Virologist")
+/*				if("Virologist")
 					H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/virologist(H), slot_wear_suit)
 					H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/virologist(H), slot_w_uniform)
-					H.equip_to_slot_or_del(new /obj/item/clothing/mask/surgical(H), slot_wear_mask)
+					H.equip_to_slot_or_del(new /obj/item/clothing/mask/surgical(H), slot_wear_mask)*/
 				if("Medical Doctor")
 					H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical(H), slot_w_uniform)
 					H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(H), slot_wear_suit)
@@ -88,10 +88,6 @@
 						H.equip_to_slot_or_del(new /obj/item/clothing/head/nursehat(H), slot_head)
 					else
 						H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/purple(H), slot_w_uniform)
-				if("Court Medical Expert")
-					H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical(H), slot_w_uniform)
-					H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(H), slot_wear_suit)
-					H.equip_to_slot_or_del(new /obj/item/device/detective_scanner(H), slot_r_store)
 		else
 			H.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical(H), slot_w_uniform)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat(H), slot_wear_suit)
@@ -117,8 +113,8 @@
 	spawn_positions = 2
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
-	minimal_access = list(access_medical, access_chemistry)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_maint_tunnels)
+	minimal_access = list(access_medical, access_chemistry,, access_maint_tunnels)
 	alt_titles = list("Pharmacist")
 
 
@@ -148,8 +144,8 @@
 	spawn_positions = 2
 	supervisors = "the chief medical officer and research director"
 	selection_color = "#ffeef0"
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
-	minimal_access = list(access_medical, access_morgue, access_genetics, access_research)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research, access_maint_tunnels)
+	minimal_access = list(access_medical, access_morgue, access_genetics, access_research,, access_maint_tunnels)
 
 
 	equip(var/mob/living/carbon/human/H)
@@ -168,7 +164,7 @@
 			H.equip_to_slot_or_del(new /obj/item/weapon/storage/wallet/random(H.back), slot_in_backpack)
 		return 1
 
-/*/datum/job/virologist
+/datum/job/virologist
 	title = "Virologist"
 	flag = VIROLOGIST
 	department_flag = MEDSCI
@@ -177,8 +173,8 @@
 	spawn_positions = 1
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
-	minimal_access = list(access_medical, access_virology)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_maint_tunnels)
+	minimal_access = list(access_medical, access_virology, access_maint_tunnels)
 	alt_titles = list("Pathologist","Microbiologist")
 
 
@@ -201,7 +197,7 @@
 		else
 			H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
 			H.equip_to_slot_or_del(new /obj/item/weapon/storage/wallet/random(H.back), slot_in_backpack)
-		return 1*/
+		return 1
 
 /datum/job/psychiatrist
 	title = "Psychiatrist"
@@ -212,8 +208,8 @@
 	spawn_positions = 1
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_psychiatrist)
-	minimal_access = list(access_medical, access_psychiatrist)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_psychiatrist, access_maint_tunnels)
+	minimal_access = list(access_medical, access_psychiatrist, access_maint_tunnels)
 	alt_titles = list("Psychologist")
 
 

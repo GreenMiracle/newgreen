@@ -183,6 +183,11 @@
 
 			if(M.species.attack_verb == "punch")
 				playsound(loc, "punch", 25, 1, -1)
+				if (istype(wear_mask, /obj/item/clothing/mask/gas/clown_hat))
+					sleep(2)
+					for(var/mob/O in viewers(src, null))
+						O.show_message(text("[src]'s nose honks!"), 1)
+					playsound(src.loc, 'sound/items/bikehorn.ogg', 50, 1)
 			else
 				playsound(loc, 'sound/weapons/slice.ogg', 25, 1, -1)
 

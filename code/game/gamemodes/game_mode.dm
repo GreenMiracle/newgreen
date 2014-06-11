@@ -59,12 +59,14 @@
 
 	uplink_items.Add(get_spawn_item_string("Devices and Tools"))
 	uplink_items.Add(new /datum/spawn_item/emag)
-//	uplink_items.Add(new /datum/spawn_item/hacktool) Where is your hacktool?
+	uplink_items.Add(new /datum/spawn_item/hacktool)
 	uplink_items.Add(new /datum/spawn_item/toolbox)
 	uplink_items.Add(new /datum/spawn_item/thermal)
 	uplink_items.Add(new /datum/spawn_item/binary)
 	uplink_items.Add(new /datum/spawn_item/aimodule)
 	uplink_items.Add(new /datum/spawn_item/c4)
+	uplink_items.Add(new /datum/spawn_item/c4explosive)
+	uplink_items.Add(new /datum/spawn_item/heavyc4explosive)
 	uplink_items.Add(new /datum/spawn_item/powersink)
 	uplink_items.Add(new /datum/spawn_item/singularity_beacon)
 	uplink_items.Add(new /datum/spawn_item/space_suit)

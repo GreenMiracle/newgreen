@@ -17,6 +17,7 @@
 		if ("dog3") soundin = pick('sound/voice/DOG3.ogg')
 		if ("chimpers") soundin = pick('sound/voice/monkey1.ogg')
 		if ("laugh") soundin = pick('sound/voice/laugh1.ogg', 'sound/voice/laugh2.ogg', 'sound/voice/laugh3.ogg')
+		if ("buttstep") soundin = pick('fart.ogg','poo2.ogg','fart1.ogg')
 
 
 	var/sound/S = sound(soundin)
