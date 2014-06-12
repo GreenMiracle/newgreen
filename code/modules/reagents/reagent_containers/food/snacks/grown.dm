@@ -343,7 +343,10 @@
 		if(istype(W, /obj/item/weapon/paper))
 			user << "\red You roll up the branch into the paper."
 			var/obj/item/clothing/mask/cigarette/weed/P = new(user.loc)
-			reagents.trans_to(P, reagents.total_volume)
+			P.reagents.add_reagent("space_drugs", 1+round(src.potency / 8, 1))
+			P.reagents.add_reagent("kelotane", 1+round(src.potency / 8, 1))
+			P.reagents.add_reagent("bicaridine", 1+round(src.potency / 10, 1))
+			P.reagents.add_reagent("toxin", 1+round(src.potency / 10, 1))
 			P.name = pick("joint","doobie","spliff","roach","blunt","roll","fatty","reefer")
 			del W
 			del src
@@ -368,7 +371,34 @@
 		if(istype(W, /obj/item/weapon/paper))
 			user << "\red You roll up the branch into the paper."
 			var/obj/item/clothing/mask/cigarette/weed/P = new(user.loc)
-			reagents.trans_to(P, reagents.total_volume)
+			P.reagents.add_reagent("bicaridine", 1+round(src.potency / 8, 1))
+			P.reagents.add_reagent("synaptizine", 1+round(src.potency / 8, 1))
+			P.reagents.add_reagent("hyperzine", 1+round(src.potency / 10, 1))
+			P.reagents.add_reagent("space_drugs", 1+round(src.potency / 10, 1))
+			P.name = pick("joint","doobie","spliff","roach","blunt","roll","fatty","reefer")
+			del W
+			del src
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/cannabis
+	seed = "/obj/item/seeds/cannabisseed"
+	name = "cannabis"
+	desc = "Smoke weed erryday"
+	icon_state = "cannabisleaf"
+	potency = 10
+	New()
+		..()
+		spawn(5)	//So potency can be set in the proc that creates these crops
+			reagents.add_reagent("nutriment", 1)
+			reagents.add_reagent("space_drugs", 1+round(potency / 10, 1))
+			reagents.add_reagent("imidazoline", 1+round(potency / 10, 1))
+			bitesize = 1+round(reagents.total_volume / 2, 1)
+
+	attackby(obj/item/weapon/W as obj, mob/user as mob)
+		if(istype(W, /obj/item/weapon/paper))
+			user << "\red You roll up the branch into the paper."
+			var/obj/item/clothing/mask/cigarette/weed/P = new(user.loc)
+			P.reagents.add_reagent("space_drugs", 1+round(src.potency / 10, 1))
+			P.reagents.add_reagent("imidazoline", 1+round(src.potency / 10, 1))
 			P.name = pick("joint","doobie","spliff","roach","blunt","roll","fatty","reefer")
 			del W
 			del src

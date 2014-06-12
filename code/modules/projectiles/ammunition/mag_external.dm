@@ -48,6 +48,8 @@
 
 	extra
 		ammo_type = /obj/item/ammo_casing/c9mm/extra
+	extended
+		max_ammo = 17
 
 /obj/item/ammo_magazine/external/msmg9mm
 	name = "magazine (9mm)"

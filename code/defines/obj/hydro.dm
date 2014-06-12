@@ -798,6 +798,23 @@
 	plant_type = 0
 	growthstages = 6
 
+/obj/item/seeds/cannabisseed
+	name = "Cannabis seeds"
+	icon_state = "seed-cannabis"
+	mypath = "/obj/item/seeds/cannabisseed"
+	species = "cannabis"
+	plantname = "cannabis plant"
+	productname = "/obj/item/weapon/reagent_containers/food/snacks/grown/cannabis"
+	lifespan = 30
+	endurance = 30 // tuff like a toiger
+	maturation = 6
+	production = 6
+	yield = 4
+	potency = 8
+	oneharvest = 0
+	growthstages = 5
+	plant_type = 1
+
 /obj/item/seeds/whitebeetseed
 	name = "pack of white-beet seeds"
 	desc = "These seeds grow into sugary beet producing plants."
