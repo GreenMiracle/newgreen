@@ -119,6 +119,13 @@ datum
 		//	required_reagents = list("hydrogen" = 1, "carbon" = 1, "nitrogen" = 1)
 		//	result_amount = 1
 
+		tanatoxin
+			name = "Tanatizine"
+			id = "tanatoxin"
+			result = "tanatoxin"
+			required_reagents = list("toxin" = 1, "plasma" = 1, "inaprovaline" = 1)
+			result_amount = 1
+
 		thermite
 			name = "Thermite"
 			id = "thermite"

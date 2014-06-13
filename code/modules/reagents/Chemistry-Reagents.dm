@@ -322,14 +322,33 @@ datum
 			description = "A Toxic chemical."
 			reagent_state = LIQUID
 			reagent_color = "#CF3600" // rgb: 207, 54, 0
+			custom_metabolism = 0.5
+
+			on_mob_life(var/mob/living/M as mob)
+				if(!M) M = holder.my_atom
+				// Toxins aren't weak anymore, hurray!
+				M.adjustToxLoss(2)
+				..()
+				return
+
+
+
+		tanatoxin
+			name = "Tanatizine"
+			id = "tanatoxin"
+			description = "A Toxic chemical which cannot be treated."
+			reagent_state = LIQUID
+			reagent_color = "#0066DD" // rgb: 0, 102, 221
 			custom_metabolism = 0.01
 
 			on_mob_life(var/mob/living/M as mob)
 				if(!M) M = holder.my_atom
-				// Toxins are really weak, but without being treated, last very long.
-				M.adjustToxLoss(0.2)
+				// It's just designed so.
+				M.adjustToxLoss(0.1)
 				..()
 				return
+
+
 
 		plasticide
 			name = "Plasticide"
