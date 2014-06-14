@@ -290,8 +290,11 @@ proc/checkhtml(var/t)
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
-	return pointization(upperrustext(copytext(t, 1, 2)) + copytext(t, 2))
+	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
 
+
+/proc/ruscapitalize(var/t as text)
+	return pointization(upperrustext(copytext(t, 1, 2)) + copytext(t, 2))
 
 proc/pointization(text as text)
 	if (copytext(text,-1) in list("!", "?", "."))

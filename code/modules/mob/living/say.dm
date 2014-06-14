@@ -79,7 +79,7 @@ var/list/department_radio_keys = list(
 	*/
 
 	message = trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
-	message = capitalize(message)
+	message = ruscapitalize(message)
 
 	/*
 		Sanity checking and speech failure.
