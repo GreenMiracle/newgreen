@@ -179,3 +179,164 @@
 	name = "\improper HYDROPONICS"
 	desc = "A warning sign which reads 'HYDROPONICS'"
 	icon_state = "hydro1"
+
+/obj/structure/sign/xenobio
+	name = "\improper Xenobiology"
+	desc = "Xenobiology"
+	icon_state = "xenobio2"
+
+/*D2 SIGNS*/
+/*/obj/structure/sign/
+	name = ""
+	desc = "A warning sign which reads ''"
+	icon_state = ""*/
+/*obj/structure/sign/noshitlers
+	name = "No shitlers!"
+	desc = "A warning sign which reads 'No shitlers allowed!'"
+	icon_state = "noshitlers"*/ //Sometime
+
+/obj/structure/sign/cleanhands
+	name = "CLEAN HANDS!"
+	desc = "A warning sign which reads 'Clean hands! Save Lives!'"
+	icon_state = "cleanhands"
+
+/obj/structure/sign/silenceplease
+	name = "Silence please!"
+	desc = "A warning sign which reads 'Silence please!'"
+	icon_state = "silenceplease"
+
+/obj/structure/sign/medholo
+	name = "Medical Hologram"
+	desc = "A medical hologram. Looks very nice."
+	icon_state = "medholo"
+
+/obj/structure/sign/noshit
+	name = "People DIE if you KILL!"
+	desc = "A warning sign which reads 'People DIE if you KILL!'"
+	icon_state = "noshit"
+
+/obj/structure/sign/double/laundromat
+	name = "Laundromat"
+	icon = 'icons/obj/barsigns.dmi'
+	desc = "Laundromat"
+	icon_state = "laundromat"
+
+/*####################SIGNS OF DEPATRTAMENTS####################*/
+/*/obj/structure/sign/departments/
+	name = ""
+	desc = ""
+	icon_state = ""*/
+
+/obj/structure/sign/departments/library
+	desc = "Library"
+	name = "Library"
+	icon_state = "library"
+
+/obj/structure/sign/departments/lounge
+	desc = "The Lounge"
+	name = "The Lounge"
+	icon_state = "lounge"
+
+/obj/structure/sign/departments/Storage
+	desc = "Storage"
+	name = "Storage"
+	icon_state = "Storage"
+
+/obj/structure/sign/departments/AI
+	desc = "AI"
+	name = "AI"
+	icon_state = "AI"
+
+/obj/structure/sign/departments/kitchen
+	desc = "Kitchen"
+	name = "Kitchen"
+	icon_state = "kitchen"
+
+/obj/structure/sign/departments/bar
+	desc = "Bar"
+	name = "Bar"
+	icon_state = "bar"
+
+/obj/structure/sign/departments/medbay
+	desc = "Medbay"
+	name = "Medbay"
+	icon_state = "medbay"
+
+/obj/structure/sign/departments/hydroponics
+	desc = "Hydroponics"
+	name = "Hydroponics"
+	icon_state = "hydroponics"
+
+/obj/structure/sign/departments/engineering
+	desc = "Engineering"
+	name = "Engineering"
+	icon_state = "engineering"
+
+/obj/structure/sign/departments/bridge
+	desc = "Bridge"
+	name = "Bridge"
+	icon_state = "bridge"
+
+/obj/structure/sign/departments/brig
+	desc = "Brig"
+	name = "Brig"
+	icon_state = "brig"
+
+/obj/structure/sign/departments/atmos
+	desc = "Atmospherics"
+	name = "Atmospherics"
+	icon_state = "atmos"
+
+/obj/structure/sign/departments/crew
+	desc = "Dormitory"
+	name = "Dormitory"
+	icon_state = "crew"
+/obj/structure/sign/departments/tele
+	desc = "Teleporter"
+	name = "Teleporter"
+	icon_state = "Teleporter"
+
+/obj/structure/sign/departments/qm
+	desc = "Quatermaster"
+	name = "Quatermaster"
+	icon_state = "Quatermaster"
+
+/obj/structure/sign/departments/gas
+	desc = "Gas Storage"
+	name = "Gas Storage"
+	icon_state = "Gas Storage"
+
+/obj/structure/sign/departments/chemist
+	name = "Chemist"
+	desc = "Chemist"
+	icon_state = "Chemist"
+
+/obj/structure/sign/departments/morgue
+	name = "Morgue"
+	desc = "DEAD NIGGERS STORAGE"
+	icon_state = "Morgue"
+
+/obj/structure/sign/departments/emt
+	name = "E.M.T"
+	desc = "E.M.T"
+	icon_state = "EMT"
+
+/obj/structure/sign/departments/genetics
+	name = "Genetics"
+	desc = "Genetics"
+	icon_state = "genetics"
+
+/obj/structure/sign/departments/virology
+	name = "Virology"
+	desc = "Virology"
+	icon_state = "virology"
+
+/obj/structure/sign/departments/cryo
+	name = "Cryogenics"
+	desc = "Cryogenics"
+	icon_state = "Cryogenics"
+
+/obj/structure/sign/departments/chiefengineer
+	name = "Chief Engineer"
+	desc = "Chef Engineer's office"
+	icon_state = "chief"
