@@ -290,7 +290,27 @@ proc/checkhtml(var/t)
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return pointization(upperrustext(copytext(t, 1, 2)) + copytext(t, 2))
+
+
+proc/pointization(text as text)
+	if (copytext(text,-1) in list("!", "?", "."))
+		return text
+	text += "."
+	return text
+
+
+/proc/upperrustext(text as text)
+	var/t = ""
+	for(var/i = 1, i <= length(text), i++)
+		var/a = text2ascii(text, i)
+		if (a > 223)
+			t += ascii2text(a - 32)
+		else if (a == 184)
+			t += ascii2text(168)
+		else t += ascii2text(a)
+	return t
+
 
 //Centers text by adding spaces to either side of the string.
 /proc/dd_centertext(message, length)
