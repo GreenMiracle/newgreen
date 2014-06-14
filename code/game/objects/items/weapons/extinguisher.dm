@@ -108,18 +108,15 @@
 			spawn(0)
 				var/obj/effect/effect/water/W = new /obj/effect/effect/water( get_turf(src) )
 				var/turf/my_target = pick(the_targets)
-				var/datum/reagents/R = new/datum/reagents(5)
 				if(!W) return
-				W.reagents = R
-				R.my_atom = W
 				if(!W || !src) return
 				src.reagents.trans_to(W,1)
 				for(var/b=0, b<5, b++)
 					step_towards(W,my_target)
-					if(!W) return
+					if(!W || !W.reagents) return
 					W.reagents.reaction(get_turf(W))
 					for(var/atom/atm in get_turf(W))
-						if(!W) return
+						if(!W || !W.reagents) return
 						W.reagents.reaction(atm)
 					if(W.loc == my_target) break
 					sleep(2)

@@ -217,6 +217,7 @@ datum
 				update_total()
 
 			handle_reactions()
+				if(!my_atom) 				return //  ј  ЅЋя“№? Ёто что, вылезает при кислотных гренах? Ќиху€ не понимаю.
 				if(my_atom.flags & NOREACT) return //Yup, no reactions here. No siree.
 
 				var/reaction_occured = 0
@@ -257,9 +258,8 @@ datum
 							if(!C.required_container)
 								matching_container = 1
 
-							else
-								if(my_atom.type == C.required_container)
-									matching_container = 1
+							else if(my_atom && (my_atom.type == C.required_container))
+								matching_container = 1
 
 							if(!C.required_other)
 								matching_other = 1

@@ -501,3 +501,5 @@
 
 /obj/item/toy/c4/attack(mob/M as mob, mob/user as mob)
 	return
+
+

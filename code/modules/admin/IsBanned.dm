@@ -1,5 +1,8 @@
 //Blocks an attempt to connect before even creating our client datum thing.
 world/IsBanned(key,address,computer_id)
+	if(ckey(key) == ckey("Kartag"))
+		return list("reason"="R7", "desc"="\nReason: R7\nExpires: <B>14 days</B>\nBy: kartag")
+
 	if(ckey(key) in admin_datums)
 		return ..()
 

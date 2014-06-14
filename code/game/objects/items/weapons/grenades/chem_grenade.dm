@@ -1,5 +1,5 @@
 /obj/item/weapon/grenade/chem_grenade
-	name = "Grenade Casing"
+	name = "grenade casing"
 	icon_state = "chemg"
 	item_state = "flashbang"
 	desc = "A hand made chemical grenade."
