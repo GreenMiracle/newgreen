@@ -294,9 +294,18 @@ proc/checkhtml(var/t)
 
 
 /proc/ruscapitalize(var/t as text)
-	return pointization(upperrustext(copytext(t, 1, 2)) + copytext(t, 2))
+	var/s = 2
+	if (copytext(t,1,2) == ";")
+		s += 1
+	if (copytext(t,1,2) == ":")
+		s += 2
+	return pointization(upperrustext(copytext(t, 1, s)) + copytext(t, s))
 
-proc/pointization(text as text)
+/proc/pointization(text as text)
+	if (!text)
+		return
+	if (copytext(text,1,2) == "*") //Emotes allowed.
+		return text
 	if (copytext(text,-1) in list("!", "?", "."))
 		return text
 	text += "."
