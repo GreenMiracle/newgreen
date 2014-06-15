@@ -55,11 +55,12 @@ var/global/list/autolathe_recipes_hidden = list( \
 		new /obj/item/device/radio/electropack(), \
 		new /obj/item/weapon/weldingtool/largetank(), \
 		new /obj/item/weapon/handcuffs(), \
+		new /obj/item/ammo_magazine/box/c38/e(), \
 		new /obj/item/ammo_magazine/box/a357(), \
 		new /obj/item/ammo_magazine/external/mc9mm/extra(), \
 		new /obj/item/ammo_casing/shotgun(), \
 		new /obj/item/ammo_casing/shotgun/dart(), \
-		/* new /obj/item/weapon/shield/riot(), */ \
+		new /obj/item/weapon/shield/riot(),  \
 	)
 
 /obj/machinery/autolathe

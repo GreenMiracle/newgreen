@@ -74,7 +74,7 @@
 #define	HUNGER_FACTOR 0.05
 
 // How many units of reagent are consumed per tick, by default.
-#define  REAGENTS_METABOLISM 0.2
+#define REAGENTS_METABOLISM 0.2
 
 // By defining the effect multiplier this way, it'll exactly adjust
 // all effects according to how they originally were with the 0.4 metabolism
@@ -399,7 +399,7 @@ var/MAX_EXPLOSION_RANGE = 14
 #define GAS_N2O	(1 << 4)
 
 
-var/list/accessable_z_levels = list("1" = 5, "3" = 10, "4" = 15, "5" = 10, "6" = 60)
+var/list/accessable_z_levels = list("1" = 5, "3" = 10, "4" = 15, "5" = 60)//"6" = 60
 //This list contains the z-level numbers which can be accessed via space travel and the percentile chances to get there.
 //(Exceptions: extended, sandbox and nuke) -Errorage
 //Was list("3" = 30, "4" = 70).

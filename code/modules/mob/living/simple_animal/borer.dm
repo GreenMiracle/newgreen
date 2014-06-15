@@ -104,7 +104,7 @@
 /mob/living/simple_animal/borer/say(var/message)
 
 	message = trim(copytext(sanitize(message), 1, MAX_MESSAGE_LEN))
-	message = capitalize(message)
+	message = ruscapitalize(message)
 
 	if(!message)
 		return

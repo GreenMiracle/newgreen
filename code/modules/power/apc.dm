@@ -229,8 +229,8 @@
 				has_electronics = 0
 				if ((stat & BROKEN) || malfai)
 					malfai = null
-					if(occupant)
-						malfvacate(1)
+//					if(occupant)
+//						malfvacate(1)
 					user.visible_message(\
 						"\red [user.name] has broken the power control board inside [src.name]!",\
 						"You broke the charred power control board and remove the remains.",
@@ -911,19 +911,19 @@
 					malfai << "Hack complete. The APC is now under your exclusive control."
 					update_icon()
 
-	else if (href_list["occupyapc"])
+/*	else if (href_list["occupyapc"])
 		malfoccupy(usr)
 
 
 	else if (href_list["deoccupyapc"])
-		malfvacate()
+		malfvacate()*/
 
 	if(usingUI)
 		src.updateDialog()
 
 	return
 
-/obj/machinery/power/apc/proc/malfoccupy(var/mob/living/silicon/ai/malf)
+/*obj/machinery/power/apc/proc/malfoccupy(var/mob/living/silicon/ai/malf)
 	if(!istype(malf))
 		return
 	if(istype(malf.loc, /obj/machinery/power/apc)) // Already in an APC
@@ -962,7 +962,7 @@
 		if(forced)
 			src.occupant.loc = src.loc
 			src.occupant.death()
-			src.occupant.gib()
+			src.occupant.gib()*/
 
 
 /obj/machinery/power/apc/proc/ion_act()
@@ -1244,8 +1244,8 @@
 				ticker.mode:apcs--
 	stat |= BROKEN
 	operating = 0
-	if(occupant)
-		malfvacate(1)
+//	if(occupant)
+//		malfvacate(1)
 	update_icon()
 	update()
 
@@ -1272,8 +1272,8 @@
 	area.power_equip = 0
 	area.power_environ = 0
 	area.power_change()
-	if(occupant)
-		malfvacate(1)
+//	if(occupant)
+//		malfvacate(1)
 	..()
 
 /obj/machinery/power/apc/proc/shock(mob/user, prb)

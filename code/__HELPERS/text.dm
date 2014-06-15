@@ -292,6 +292,38 @@ proc/checkhtml(var/t)
 /proc/capitalize(var/t as text)
 	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
 
+
+/proc/ruscapitalize(var/t as text)
+	var/s = 2
+	if (copytext(t,1,2) == ";")
+		s += 1
+	if (copytext(t,1,2) == ":")
+		s += 2
+	return pointization(upperrustext(copytext(t, 1, s)) + copytext(t, s))
+
+/proc/pointization(text as text)
+	if (!text)
+		return
+	if (copytext(text,1,2) == "*") //Emotes allowed.
+		return text
+	if (copytext(text,-1) in list("!", "?", "."))
+		return text
+	text += "."
+	return text
+
+
+/proc/upperrustext(text as text)
+	var/t = ""
+	for(var/i = 1, i <= length(text), i++)
+		var/a = text2ascii(text, i)
+		if (a > 223)
+			t += ascii2text(a - 32)
+		else if (a == 184)
+			t += ascii2text(168)
+		else t += ascii2text(a)
+	return t
+
+
 //Centers text by adding spaces to either side of the string.
 /proc/dd_centertext(message, length)
 	var/new_message = message

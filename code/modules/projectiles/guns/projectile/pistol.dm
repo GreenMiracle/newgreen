@@ -1,25 +1,69 @@
-/obj/item/weapon/gun/projectile/automatic/silenced
-	name = "silenced pistol"
+/obj/item/weapon/gun/projectile/automatic/pistol/usp
+	name = "usp"
+	desc = "A well known german pistol. Uses .45 rounds."
+	icon_state = "usp"
+	w_class = 3.0
+	caliber = ".45"
+	origin_tech = "combat=2;materials=2;syndicate=5"
+	fire_sound = 'sound/weapons/gunshot_usp.ogg'
+	mag_type = /obj/item/ammo_magazine/external/sm45
+
+/obj/item/weapon/gun/projectile/automatic/pistol/silenced/usp
+	name = "usp silenced"
 	desc = "A small, quiet,  easily concealable gun. Uses .45 rounds."
 	icon_state = "silenced_pistol"
 	w_class = 3.0
-	silenced = 1
-	origin_tech = "combat=2;materials=2;syndicate=8"
-	mag_type = /obj/item/ammo_magazine/external/sm45
+	caliber = ".45"
+	origin_tech = "combat=3;materials=2;syndicate=8"
 	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
+	mag_type = /obj/item/ammo_magazine/external/sm45
 
-/obj/item/weapon/gun/projectile/automatic/silenced/update_icon()
+/obj/item/weapon/gun/projectile/automatic/pistol/usp/p8
+	name = "p8"
+	desc = "Modification of Usp pistol. Uses 9mm rounds."
+	icon_state = "p8"
+	caliber = "9mm"
+	mag_type = /obj/item/ammo_magazine/external/mc9mm
+
+
+/obj/item/weapon/gun/projectile/automatic/pistol/usp/p8/New()
 	..()
-	icon_state = "[initial(icon_state)]"
-	return
+	del(magazine)
+	magazine = new /obj/item/ammo_magazine/external/mc9mm/extended(src)
 
 
 /obj/item/weapon/gun/projectile/automatic/deagle
 	name = "desert eagle"
 	desc = "A robust handgun that uses .50 AE ammo"
 	icon_state = "deagle"
+	caliber = ".50"
 	force = 14.0
 	mag_type = /obj/item/ammo_magazine/external/m50
+
+/*obj/item/weapon/gun/projectile/automatic/pistol/glock
+	name = "glock"
+	desc = "A old Glock 17 pistol. Uses 9mm rounds"
+	icon_state = "glock"
+	force = 14.0
+	mag_type = /obj/item/ammo_magazine/external/mc9mm
+
+/obj/item/weapon/gun/projectile/automatic/pistol/glock/New()
+	..()
+	del(magazine)
+	magazine = new /obj/item/ammo_magazine/external/mc9mm/extended(src)*/
+
+/obj/item/weapon/gun/projectile/automatic/pistol/beretta
+	name = "beretta" // Thanks to MarcusAga
+	desc = "A old Beretta M9. Uses 9mm rounds."
+	icon_state = "beretta"
+	fire_sound = 'sound/weapons/gunshot_m9.ogg'
+	force = 14.0
+	mag_type = /obj/item/ammo_magazine/external/mc9mm
+
+/obj/item/weapon/gun/projectile/automatic/pistol/beretta/New()
+	..()
+	del(magazine)
+	magazine = new /obj/item/ammo_magazine/external/mc9mm/extended(src)
 
 
 /obj/item/weapon/gun/projectile/automatic/deagle/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, flag)
@@ -78,6 +122,7 @@
 	name = "\improper Stechtkin pistol"
 	desc = "A small, easily concealable gun. Uses 9mm rounds."
 	icon_state = "pistol"
+	caliber = "9mm"
 	w_class = 2
 	silenced = 0
 	origin_tech = "combat=2;materials=2;syndicate=2"
@@ -124,6 +169,11 @@
 		update_icon()
 		return
 	..()
+
+/obj/item/weapon/gun/projectile/automatic/pistol/update_icon()
+	..()
+	icon_state = "[initial(icon_state)][silenced ? "-silencer" : ""][chambered ? "" : "-e"]"
+	return
 
 /obj/item/weapon/gun/projectile/automatic/pistol/update_icon()
 	..()

@@ -456,6 +456,7 @@
 #include "code\game\mecha\medical\odysseus.dm"
 #include "code\game\mecha\working\ripley.dm"
 #include "code\game\mecha\working\working.dm"
+#include "code\game\objects\climbing.dm"
 #include "code\game\objects\empulse.dm"
 #include "code\game\objects\explosion.dm"
 #include "code\game\objects\explosion_recursive.dm"
@@ -574,6 +575,7 @@
 #include "code\game\objects\items\weapons\stunbaton.dm"
 #include "code\game\objects\items\weapons\surgery_tools.dm"
 #include "code\game\objects\items\weapons\swords_axes_etc.dm"
+#include "code\game\objects\items\weapons\syndie.dm"
 #include "code\game\objects\items\weapons\table_rack_parts.dm"
 #include "code\game\objects\items\weapons\teleportation.dm"
 #include "code\game\objects\items\weapons\tools.dm"
@@ -1388,5 +1390,5 @@
 #include "code\ZAS\ZAS_Zones.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-#include "maps\fernflower_classic.dmm"
+#include "maps\tgstation2.0.7.2.dmm"
 // END_INCLUDE

@@ -6,13 +6,6 @@
 ######################################################################
 
 # not_a_user - Admin
-lethalghost - Host
-macleod962 - Host
-barka - Host
-odst97 - Developer
 gazbax - Host
-mishapepyaka - Host
 account12 - Host
-strinkor - Host
-fiodoss - Host
-intercross21 - Host
+smet19 - Host

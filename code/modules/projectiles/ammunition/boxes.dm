@@ -9,7 +9,7 @@
 
 
 /obj/item/ammo_magazine/box/c38
-	name = "speed loader (.38)"
+	name = "speed loader (.38 Resin)"
 	icon_state = "38"
 	caliber = ".38"
 	ammo_type = /obj/item/ammo_casing/c38
@@ -17,6 +17,7 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/box/c38/e
+	name = "speed loader (.38 Expansive)"
 	ammo_type = /obj/item/ammo_casing/c38/e
 
 

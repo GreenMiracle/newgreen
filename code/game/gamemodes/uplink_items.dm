@@ -153,10 +153,10 @@
 	cost = 3
 	//category = "Devices and Tools"
 
-///datum/spawn_item/hacktool
-//	name = "Hacktool (Slow, but stealthy.  Unlimited uses)"
-//	path = /obj/item/device/hacktool
-//	cost = 4
+/datum/spawn_item/hacktool
+	name = "Hacktool (Slow, but stealthy.  Unlimited uses)"
+	path = /obj/item/device/hacktool
+	cost = 4
 //	category = "Devices and Tools"
 
 /datum/spawn_item/toolbox
@@ -262,6 +262,17 @@
     path = /obj/item/weapon/grenade/spawnergrenade/manhacks
     cost = 3
     //category = "Highly Visible and Dangerous Weapons"
+
+/datum/spawn_item/c4explosive
+	name = "Low power explosive charge"
+	path = /obj/item/weapon/syndie/c4explosive
+	cost = 4
+
+/datum/spawn_item/heavyc4explosive
+	name = "HIGH! power explosive charge"
+	path = /obj/item/weapon/syndie/c4explosive/heavy
+	cost = 7
+//	category = ""
 
 /*
 /datum/spawn_item

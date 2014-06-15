@@ -420,6 +420,9 @@ proc/process_ghost_teleport_locs()
 	icon_state = "honk"
 	requires_power = 0
 
+/area/planet/clown/shuttle
+	name = "\improper Clown Shuttle"
+
 /area/tdome
 	name = "\improper Thunderdome"
 	icon_state = "thunder"
@@ -1179,6 +1182,12 @@ proc/process_ghost_teleport_locs()
 /area/security/brig
 	name = "\improper Brig"
 	icon_state = "brig"
+
+
+/area/security/hallway
+	name = "\improper Security Hallway"
+	icon_state = "hallA"
+
 
 /area/security/prison
 	name = "\improper Prison Wing"

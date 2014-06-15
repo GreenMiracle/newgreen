@@ -119,6 +119,13 @@ datum
 		//	required_reagents = list("hydrogen" = 1, "carbon" = 1, "nitrogen" = 1)
 		//	result_amount = 1
 
+		tanatoxin
+			name = "Tanatizine"
+			id = "tanatoxin"
+			result = "tanatoxin"
+			required_reagents = list("toxin" = 1, "plasma" = 1, "inaprovaline" = 1)
+			result_amount = 1
+
 		thermite
 			name = "Thermite"
 			id = "thermite"
@@ -187,6 +194,14 @@ datum
 			id = "kelotane"
 			result = "kelotane"
 			required_reagents = list("silicon" = 1, "carbon" = 1)
+			result_amount = 2
+
+		peridaxon
+			name = "Peridaxon"
+			id = "peridaxon"
+			result = "peridaxon"
+			required_reagents = list("bicaridine" = 2, "clonexadone" = 2)
+			required_catalysts = list("plasma" = 5)
 			result_amount = 2
 
 		virus_food

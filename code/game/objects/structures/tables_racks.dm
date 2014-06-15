@@ -511,14 +511,12 @@
 		del(src)
 
 	if(usr.a_intent == "disarm" && get_dist(user, src) <= 1 && !usr.buckled)
-		visible_message("<span class='notice'>[user] trying to clumb on the [src].</span>")
-		if(do_mob(user, get_turf(user), 8))
-			if(prob(70))
-				visible_message("<span class='notice'>[user] climbs on the [src].</span>")
-				usr.loc = src.loc
-			else
-				visible_message("<span class='warning'>[user] slipped off the edge of the [src].</span>")
-				usr.weakened += 3
+		if(prob(70))
+			visible_message("<span class='notice'>[user] climbs on the [src].</span>")
+			usr.loc = src.loc
+		else
+			visible_message("<span class='warning'>[user] slipped off the edge of the [src].</span>")
+			usr.weakened += 3
 
 /obj/structure/rack/attack_paw(mob/user)
 	if(HULK in user.mutations)

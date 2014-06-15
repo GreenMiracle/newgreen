@@ -269,6 +269,10 @@
 	if(iscarbon(src))
 		var/mob/living/carbon/C = src
 		C.handcuffed = initial(C.handcuffed)
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = src
+		H.lost_anus = 0
+		H.called_superfart = 0
 	for(var/datum/disease/D in viruses)
 		D.cure(0)
 	if(stat == 2)
